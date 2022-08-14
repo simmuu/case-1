@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!-- New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 3
+   Case Problem 1
+   
+   Slate & Pencil Home Page
+   Author: Simarjot kaur
+   Date:   06-06-2022
+   
+   Filename: sp_home.html
+     -->
+   
+<meta charset="utf-8" />
+<title>Slate &amp; Pencil </title>
+<link href="sp_base.css" rel="stylesheet" />
+<link href="sp_layout_txt.css" rel="stylesheet" />
+<link href="sp_styles.css" rel="stylesheet" />
+</head>
+
+<body>
+<header class="row">
+<img src="sp_logo.png" alt="Slate & Pencil " />
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Our</a></li>
+<li><a href="#">Pricing</a></li>
+<li><a href="#">Testimonials</a></li>
+<li><a href="#">Your Account</a></li>
+<li><a href="#">Chat Online</a></li>
+</ul>
+</nav>
+</header>
+<nav class="horizontal">
+<ul class="row">
+<li><a href="#">Math</a></li>
+<li><a href="#">Science</a></li>
+<li><a href="#">English</a></li>
+<li><a href="#">Languages</a></li>
+<li><a href="#">History</a></li>
+<li><a href="#">Sociology</a></li>
+<li><a href="#">Art</a></li>
+<li><a href="#">Other</a></li>
+</ul>
+</nav>
+<ul id="topics" class="row">
+<li><img src="sp_topic1.png" alt="" />
+<p>Our have advanced degrees, supplemented with real-world
+experience to help you meet your education goals.</p>
+</li>
+<li><img src="sp_topic2.png" alt="" />
+<p>Every session is just you and your instructor and
+there is always someone online to help you. 24/7.</p>
+</li>
+<li><img src="sp_topic3.png" alt="" />
+<p>We cover it all: From from Biochemistry to
+Beethoven. We can also help you prep for the ACT, SAT, and AP
+exams.</p>
+</li>
+<li><img src="sp_topic4.png" alt="" />
+<p>We keep our prices low. Sign up for one-time assistance or enroll
+for a full semester at greatly reduced rates.</p>
+</li>
+</ul>
+<hr />
+<ul id="comments">
+<li><img src="sp_student1.png" alt="" />
+<p>&ldquo;Thanks to <em>Slate &amp; Pencil</em> I passed AP Calculus
+with a 5.&rdquo;<br />
+<br />
+&mdash; Kevin, 12th Grade, Utah</p>
+</li>
+<li><img src="sp_student2.png" alt="" />
+<p>&ldquo;I use <em>Slate &amp; Pencil</em> all of the time to
+supplement my lectures and course notes.&rdquo;<br />
+<br />
+&mdash; Paul, 12th Grade, Texas</p>
+</li>
+<li><img src="sp_student3.png" alt="" />
+<p>&ldquo;I'm making the honor roll for the first time thanks to
+your wonderful service and help!&rdquo;<br />
+<br />
+&mdash; Lisa, 11th Grade, Florida</p>
+</li>
+<li><img src="sp_student4.png" alt="" />
+<p>&ldquo;Geometry is a breeze after working online with your great
+and review materials.&rdquo;<br />
+<br />
+&mdash; Karen, 9th Grade, Nebraska</p>
+</li>
+<li><img src="sp_student5.png" alt="" />
+<p>&ldquo;I've seen a great improvement in my use of study time and
+I retain more than ever before.&rdquo;<br />
+<br />
+&mdash; Gianna, 10th Grade, Vermont</p>
+</li>
+<li><img src="sp_student6.png" alt="" />
+<p>&ldquo;After using <em>Slate &amp; Pencil</em>, my SAT and ACT
+scores went through the roof!!!&rdquo;<br />
+<br />
+&mdash; Todd, 11th Grade, Illinois</p>
+</li>
+</ul>
+</body>
+</html>
+
+sp_layout.css
+******************
+
+@charset "utf-8";
+
+html {
+height: 100%;
+}
+
+body {
+margin-left: auto;
+margin-right: auto;
+width: 95%;
+max-width: 960px;
+min-width: 640px;
+height: 100%;
+}
+
+header, ul, nav, li, a {
+box-sizing: border-box;
+}
+
+/* Row Styles */
+
+[class^="row"]::after {
+clear: both;
+content: "";
+display: table;
+}
+
+/* Page Header Styles */
+
+body > header.row > img {
+display: block;
+width: 70%;
+float: left;
+}
+
+header.row > nav {
+float: left;
+padding-left: 2%;
+padding-right: 2%;
+width: 30%;
+}
+
+body > header.row > nav > ul > li {
+display: block;
+}
+
+body > header.row > nav > ul > li > a {
+display: block;
+width: 100%;
+}
+
+/* Horizontal Navigation List Styles */
+
+body > nav.horizontal > ul.row > li{
+display: block;
+width: 12.5%;
+float: left;
+
+}
+
+
+/* Topics Styles */
+
+body > ul#topics.row > li {
+display: block;
+width: 20%;
+float: left;
+margin-left: 0%;
+margin-right: 1.5%;
+}
+
+body > ul#topics.row > li:first-of-type {
+margin-left: 7.75%;
+}
+
+body > ul#topics.row > li:last-of-type {
+margin-right: 7.75%;
+}
+
+body > ul#topics.row > li > img {
+display: block;
+width: 50%;
+margin-left: auto;
+margin-right: auto;
+}
+
+/* HR Styles */
+
+hr {
+width: 50%;
+}
+
+
+/* Customer Comment Styles */
+
+body > ul#comments {
+width: 75%;
+margin-top: 40px;
+margin-bottom: 40px;
+margin-left: auto;
+margin-right: auto;
+}
+
+body > ul#comments > li {
+display: block;
+width: 50%;
+float: left;
+margin-bottom: 30px;
+}
+
+body > ul#comments > li > img {
+display: block;
+width: 20%;
+float: left;
+margin-left: 5%;
+margin-right: 5%;
+}
+
+body > ul#comments > li > p {
+float: left;
+width: 70%;
+}
+
+/* Footer Styles */
+
+footer {
+clear: both;
+}
+
+sp_styles.css
+****************
+
+@charset "utf-8";
+
+html {
+background-color: rgb(230, 182, 144);
+}
+
+body {
+background-color: rgb(250, 238, 218);
+font-family: Verdana, Geneva, Arial, sans-serif;
+}
+
+/* Page Header Styles */
+
+body > header {
+background-color: rgb(61, 138, 216);
+}
+
+
+body > header > nav a {
+font-size: 1em;
+margin: 0.4em 0;
+padding: 5px;
+}
+
+body > header > nav a:link, body > header > nav:visited {
+color: rgb(250, 238, 218);
+}
+
+body > header > nav a:hover, body > header > nav:active {
+background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+/* Horizontal Navigation List Styles */
+
+nav.horizontal ul li {
+background-color: rgb(18, 31, 102);
+font-size: 0.9em;
+padding: 10px 0;
+text-align: center;
+}
+
+nav.horizontal a:link, nav.horizontal a:visited {
+color: rgb(250, 238, 218);
+}
+
+nav.horizontal a:hover, nav.horizontal a:active {
+color: rgb(255, 255, 64);
+}
+
+
+/* Topics Styles */
+ul#topics {
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+
+ul#topics li p {
+color: rgb(95, 114, 232);
+font-size: 0.8em;
+}
+
+/* Customer Comment Styles */
+
+
+ul#comments li p {
+font-size: 0.9em;
+color: rgb(121, 121, 121);
+line-height: 1.2em;
+}
+
+/* Footer Styles */
+
+footer {
+color: rgb(186, 186, 156);
+background-color: rgb(44, 91, 169);
+font-size: 0.9em;
+padding: 10px 0px;
+text-align: center;
+}
+
+sp_base.css
+*******************
+
+@charset "utf-8";
+
+article, aside, figcaption, figure,
+footer, header, main, nav, section {
+display: block;
+}
+
+address, article, aside, blockquote, body, cite,
+div, dl, dt, dd, em, figcaption, figure, footer,
+h1, h2, h3, h4, h5, h6, header, html, img,
+li, main, nav, ol, p, section, span, ul {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+vertical-align: baseline;
+background: transparent;
+}
+
+nav ul {
+list-style: none;
+list-style-image: none;
+}
+
+nav a {
+text-decoration: none;
+}
+
+body {
+line-height: 1;
+}
